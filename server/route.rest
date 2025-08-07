@@ -1,0 +1,29 @@
+GET http://localhost:3000/notes HTTP/1.1
+
+###
+
+POST  http://localhost:3000/notes 
+content-type: application/json
+
+{
+    "title" : "cooking",
+    "content" : "spoon, fork"
+}
+
+###
+
+GET  http://localhost:3000/notes/6893926a0588d3d205ea15f1
+
+###
+
+DELETE http://localhost:3000/notes/6893ca200e240034b949efec
+
+###
+
+PATCH http://localhost:3000/notes/6893926a0588d3d205ea15f1
+content-type: application/json
+
+{
+    "title" : "cooking",
+    "content" : "spoon, knife"
+}
