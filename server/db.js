@@ -1,11 +1,13 @@
+// Elegant MongoDB object modeling for Node.js
 const mongoose = require("mongoose");
 require("dotenv").config();
 
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.ATLAS_URI);
+    console.log("MongoDB Connected Successfully");
   } catch (err) {
-    console.error(err.message);
+    console.error("MongoDB Connection error", err.message);
     process.exit(1);
   }
 };
