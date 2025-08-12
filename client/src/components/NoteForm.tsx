@@ -9,10 +9,11 @@ interface NoteFormProps {
 const NoteForm = ({ onSubmit }: NoteFormProps) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const _id = "";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit({ title, content });
+    onSubmit({ _id, title, content });
     setTitle("");
     setContent("");
   };
