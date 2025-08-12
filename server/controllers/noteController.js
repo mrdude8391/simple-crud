@@ -31,7 +31,7 @@ const createNote = async (req, res) => {
 const updateNote = async (req, res) => {
   const { title, content } = req.body;
   const note = res.note;
-  note.tile = title || note.title;
+  note.title = title || note.title;
   note.content = content || note.content;
   try {
     const updatedNote = await note.save();

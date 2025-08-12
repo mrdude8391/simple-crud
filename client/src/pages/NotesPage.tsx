@@ -27,12 +27,22 @@ const NotesPage = () => {
     fetchNotes();
   };
 
+  const handleUpdate = async (id: string, note: Note) => {
+    await noteService.updateNote(id, note);
+    fetchNotes();
+  };
+
   return (
     <div className="max-container padding-container border-2 border-blue-600">
       <h1>Notes Page</h1>
       <NoteForm onSubmit={createNote} />
       {notes.map((note: Note) => (
-        <NoteItem key={note._id} note={note} onDelete={handleDelete} />
+        <NoteItem
+          key={note._id}
+          note={note}
+          onUpdate={handleUpdate}
+          onDelete={handleDelete}
+        />
       ))}
     </div>
   );
