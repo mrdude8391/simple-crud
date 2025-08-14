@@ -23,11 +23,36 @@ Server File Structure:
  │   ├─ db.js
  │   ├─ package.json
  ├─ routes/
- │   └─ noteRoutes.tsx
+ │   └─ noteRoutes.js
  ├─ models/
- │   └─ Note.ts
+ │   └─ Note.js
  ├─ controllers/
- │   └─ noteController.ts
+ │   └─ noteController.js
+```
+
+## Client
+
+```
+Client File Structure (note which files are TS and TSX): 
+
+├─ Client/
+ │   └─ .env
+ │   └─ .gitignore
+ │   └─  tailwind.config.ts
+ │   └─  postcss.config.ts
+ │   └─ package.json
+ ├─ src/
+ │   └─ main.tsx
+ │   └─ index.css
+ |  ├─ types/
+ │  |   └─ Note.ts
+ |  ├─ services/
+ │  |   └─ noteService.tsx
+ |  ├─ pages/
+ │  |   └─ NotesPage.tsx
+ |  ├─ components/
+ │  |   └─ NoteItem.tsx
+ │  |   └─ NoteForm.tsx
 ```
 ## Authors
 
